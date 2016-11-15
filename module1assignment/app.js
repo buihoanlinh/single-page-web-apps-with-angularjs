@@ -27,7 +27,7 @@
           $scope.inputStyle={borderColor:'red'};
           $scope.messageStyle={color:'red'};
           $scope.result = "Please enter data first";
-        } else if (num <= 5) {
+        } else if (num <= 3) {
           $scope.inputStyle={borderColor:'green'};
           $scope.messageStyle={color:'green'};
           $scope.result = "Enjoy!";
