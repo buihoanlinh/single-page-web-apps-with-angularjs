@@ -39,6 +39,14 @@
       {
         name: "Sugar",
         quantity: "20 bags"
+      },
+      {
+        name: "Orange juice",
+        quantity: "30 bottles"
+      },
+      {
+        name: "Beer",
+        quantity: "50 bottles"
       }
     ];
     var boughtItems = [];
