@@ -1,0 +1,24 @@
+<ul>
+  <li ng-repeat="item in narrowSearch.found">
+    {{ item.short_name }}, {{ item.description }}
+    <button ng-click="narrowSearch.onRemove({index: $index});">
+      Don't want this one!
+    </button>
+  </li>
+</ul>
+<div class="error" ng-hide="narrowSearch.checkFoundItems()">Nothing found</div>
+
+<!-- <table border="1">
+  <tr>
+    <th>Short Name</th>
+    <th>Description</th>
+    <th>Action</th>
+  </tr>
+  <tr ng-repeat="item in narrowSearch.found">
+    <td>{{ item.short_name }}</td>
+    <td>{{ item.description }}</td>
+    <td><button ng-click="narrowSearch.onRemove({index: $index});">
+      Don't want this one!
+    </button></td>
+  </tr>
+</table> -->
