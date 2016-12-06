@@ -4,11 +4,11 @@
   angular.module('MenuApp')
   .controller('ItemsCategoryController', ItemsCategoryController);
 
-  ItemsCategoryController.$inject = ['$stateParams', 'items'];
-  function ItemsCategoryController($stateParams, items) {
+  ItemsCategoryController.$inject = ['name', 'items'];
+  function ItemsCategoryController(name, items) {
     var itemsCategory = this;
-    // console.log("Short name: ", shortName);
-    itemsCategory.shortName = $stateParams.categoryShortName;
+    console.log("name: ", name);
+    itemsCategory.name = name;
     console.log("Items category: ", items);
     itemsCategory.items = items;
   }
