@@ -32,17 +32,17 @@
     })
 
     // Category items page
-    .state('itemsDetail', {
-      url: '/category/{categoryShortName}',
+    .state('items', {
+      url: '/items/{categoryShortName}',
       templateUrl: 'src/templates/main-items.template.html',
       controller: 'ItemsCategoryController as itemsCategory',
       resolve: {
-        // shortName: ['$stateParam', function ($stateParam) {
-        //   return $stateParam.categoryShortName;
+        // shortName: ['$stateParams', function ($stateParam) {
+        //   return $stateParams.categoryShortName;
         // }],
-        items: ['$stateParam', 'MenuDataService',
-          function ($stateParam, MenuDataService) {
-            return MenuDataService.getItemsForCategory($stateParam.categoryShortName);
+        items: ['$stateParams', 'MenuDataService',
+          function ($stateParams, MenuDataService) {
+            return MenuDataService.getItemsForCategory($stateParams.categoryShortName);
           }]
       }
     });
