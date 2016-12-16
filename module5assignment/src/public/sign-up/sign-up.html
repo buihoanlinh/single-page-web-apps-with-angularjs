@@ -1,0 +1,46 @@
+<div class="container">
+
+  <div class="sign-up">
+    <h1 class="text-center">Sign Up</h1>
+    <div>
+      <div class="form-group">
+        <label>First Name</label>
+        <input class="form-control" type="text" ng-model="signUpCtrl.firstName" autofocus>
+      </div>
+      <div class="form-group">
+        <label>Last Name</label>
+        <input class="form-control" type="text" ng-model="signUpCtrl.lastName" autofocus>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input class="form-control" type="email" ng-model="signUpCtrl.emailAddress">
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input class="form-control" type="tel" ng-model="signUpCtrl.phoneNumber">
+      </div>
+      <div class="form-group">
+        <label>Favorite Choice</label>
+        <input class="form-control" type="text"
+               ng-model="signUpCtrl.favoriteChoice"
+               ng-change="signUpCtrl.validChoice()">
+      </div>
+      <div class="error" ng-hide="signUpCtrl.isGoodChoice">
+        <p>No such menu item exists</p>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" ng-click="signUpCtrl.signUp()" ng-disabled="!signUpCtrl.valid()">Submit</button>
+      </div>
+      <div class="success" ng-hide="!signUpCtrl.isCompleted">
+        <p>Your information has been saved</p>
+      </div>
+      <!-- <div class="form-group">
+        <button class="btn btn-primary" ng-click="signUpCtrl.validChoice()">Test</button>
+      </div> -->
+    </div>
+    <div ng-if="loginCtrl.error" class="login-error text-center">
+      {{signUpCtrl.error}}
+    </div>
+  </div>
+
+</div>

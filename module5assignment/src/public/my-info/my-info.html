@@ -1,0 +1,45 @@
+<div class="container">
+  <h3 class="text-center" ng-hide="myInfoCtrl.isSignedUp">
+    Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
+  </h3>
+  <div class="my-info" ng-show="myInfoCtrl.isSignedUp">
+    <h2 id="my-info-title" class="text-center">
+      {{ myInfoCtrl.firstName }}'s Information
+    </h2>
+    <div>
+      <div class="form-group">
+        <label>First Name</label>
+        <input class="form-control" type="text"
+               ng-model="myInfoCtrl.firstName"
+               ng-readonly="true">
+      </div>
+      <div class="form-group">
+        <label>Last Name</label>
+        <input class="form-control" type="text"
+               ng-model="myInfoCtrl.lastName"
+               ng-readonly="true">
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input class="form-control" type="email"
+               ng-model="myInfoCtrl.emailAddress"
+               ng-readonly="true">
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input class="form-control" type="tel"
+               ng-model="myInfoCtrl.phoneNumber"
+               ng-readonly="true">
+      </div>
+      <div class="form-group">
+        <label>Favorite Choice</label>
+        <input class="form-control" type="text"
+               ng-model="myInfoCtrl.favoriteChoice"
+               ng-readonly="true">
+      </div>
+    </div>
+
+    <menu-item menu-item="myInfoCtrl.menuItem">
+    </menu-item>
+  </div>
+</div>
